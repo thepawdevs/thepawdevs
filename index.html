@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PawDevs</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+font-family:Inter,sans-serif;
+
+background:linear-gradient(180deg,#081018,#04090f);
+
+color:#e7f0f3;
+
+padding:24px;
+
+animation:fade .7s;
+
+}
+
+.main{
+max-width:920px;
+margin:auto;
+}
+
+/* HERO / TOP SECTION */
+
+.top{
+
+text-align:center;
+
+padding:70px 10px 50px;
+
+position:relative;
+
+}
+
+/* background glow */
+
+.top::before{
+
+content:"";
+
+position:absolute;
+
+top:10px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:220px;
+
+height:220px;
+
+background:radial-gradient(circle,
+rgba(90,210,225,.25),
+transparent 70%);
+
+filter:blur(40px);
+
+z-index:-1;
+
+}
+
+.top h1{
+
+font-size:46px;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+/* cyan gradient text */
+
+background:linear-gradient(90deg,#7be3f0,#48b8c8);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+.paw{
+
+font-size:34px;
+
+margin-left:8px;
+
+color:#6edcea;
+
+/* floating animation */
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+.top p{
+
+color:#9fb3bd;
+
+margin-top:10px;
+
+font-size:15px;
+
+}
+
+/* floating animation */
+
+@keyframes float{
+
+0%{ transform:translateY(0); }
+
+50%{ transform:translateY(-4px); }
+
+100%{ transform:translateY(0); }
+
+}
+
+/* card sections */
+
+.box{
+
+background:linear-gradient(180deg,#16212c,#1c2835);
+
+padding:28px;
+
+border-radius:20px;
+
+margin-bottom:24px;
+
+border:1px solid rgba(255,255,255,.04);
+
+transition:.25s;
+
+}
+
+.box:hover{
+
+transform:translateY(-4px);
+
+}
+
+.box h2{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:12px;
+
+}
+
+.box p{
+
+color:#9fb3bd;
+
+line-height:1.6;
+
+}
+
+/* button */
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-top:18px;
+
+padding:10px 18px;
+
+border-radius:25px;
+
+background:linear-gradient(135deg,#5bd3e3,#3da8b7);
+
+text-decoration:none;
+
+color:#052025;
+
+font-size:14px;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 6px 14px rgba(60,180,200,.25);
+
+}
+
+/* featured */
+
+.feature{
+
+background:
+linear-gradient(
+135deg,
+rgba(70,200,210,.12),
+rgba(40,120,130,.15)
+),
+linear-gradient(180deg,#16212c,#1c2835);
+
+}
+
+/* grid links */
+
+.links{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+margin-bottom:24px;
+
+}
+
+/* each link box */
+
+.linkcard{
+
+background:#16212c;
+
+padding:22px;
+
+border-radius:16px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.05);
+
+text-decoration:none;
+
+color:#e7f0f3;
+
+transition:.25s;
+
+}
+
+.linkcard:hover{
+
+transform:translateY(-4px);
+
+background:#1e2c38;
+
+}
+
+.linkcard i{
+
+font-size:22px;
+
+color:#5bd3e3;
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+.small{
+
+display:block;
+
+color:#9fb3bd;
+
+font-size:14px;
+
+margin-top:6px;
+
+}
+
+/* contact */
+
+.contact p{
+
+display:flex;
+
+gap:10px;
+
+margin:10px 0;
+
+color:#9fb3bd;
+
+}
+
+.contact i{
+
+color:#5bd3e3;
+
+}
+
+/* footer */
+
+footer{
+
+text-align:center;
+
+margin-top:30px;
+
+font-size:14px;
+
+color:#9fb3bd;
+
+}
+
+footer i{
+
+color:#5bd3e3;
+
+}
+
+/* animation */
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(8px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* mobile */
+
+@media(max-width:600px){
+
+.top h1{
+font-size:34px;
+}
+
+.paw{
+font-size:28px;
+}
+
+.box{
+padding:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="main">
+
+<!-- improved header -->
+
+<div class="top">
+
+<h1>
+
+PawDevs 🐾
+
+</h1>
+
+<p>
+
+We use 🐾 to craft Tech
+
+</p>
+
+</div>
+
+
+<!-- who we are -->
+
+<div class="box">
+
+<h2><i class="fa-solid fa-rocket"></i> Who We Are</h2>
+
+<p>
+
+PawDevs is a group of passionate teen developers focused on exploring,
+building and experimenting with modern technologies.
+We turn creative ideas into real products and value community feedback.
+
+</p>
+
+<a class="btn" href="https://t.me/PawDevs" target="_blank">
+
+<i class="fa-brands fa-telegram"></i>
+
+Join PawDevs
+
+</a>
+
+</div>
+
+
+<!-- pawgram -->
+
+<div class="box feature">
+
+<h2><i class="fa-brands fa-apple"></i> PawGram</h2>
+
+<p>
+
+An iOS-style Instagram experience on Android with refined UI,
+smooth animations and performance focused design.
+
+</p>
+
+<a class="btn" href="https://pawgram-meow.vercel.app" target="_blank">
+
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+Visit PawGram
+
+</a>
+
+</div>
+
+
+<!-- links -->
+
+<div class="links">
+
+<a href="https://t.me/pawgramapp" target="_blank" class="linkcard">
+
+<i class="fa-solid fa-users"></i>
+
+PawGram Community
+
+<span class="small">Updates & Discussions</span>
+
+</a>
+
+
+<a href="https://pawgram-meow.vercel.app" target="_blank" class="linkcard">
+
+<i class="fa-solid fa-globe"></i>
+
+PawGram Website 
+
+<span class="small">Official PawGram Website</span>
+
+</a>
+
+
+<a href="https://github.com/thepawdevs" target="_blank" class="linkcard">
+
+<i class="fa-brands fa-github"></i>
+
+PawDevs GitHub
+
+<span class="small">GitHub Profile & Projects</span>
+
+</a>
+
+</div>
+
+
+<!-- contact -->
+
+<div class="box contact">
+
+<h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+skyairpaw@gmail.com
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-robot"></i>
+
+<a href="https://t.me/PawOwnerRobot"
+target="_blank"
+style="text-decoration:none;color:#9fb3bd;">
+
+@PawOwnerRobot
+
+</a>
+
+</p>
+
+</div>
+
+
+<footer>
+
+Crafted with 🐾 by PawDevs
+
+<br>
+
+© 2026 PawDevs
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
