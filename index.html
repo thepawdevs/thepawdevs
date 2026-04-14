@@ -1,524 +1,857 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>PawDevs</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-
-font-family:Inter,sans-serif;
-
-background:linear-gradient(180deg,#081018,#04090f);
-
-color:#e7f0f3;
-
-padding:24px;
-
-animation:fade .7s;
-
-}
-
-.main{
-max-width:920px;
-margin:auto;
-}
-
-/* HERO / TOP SECTION */
-
-.top{
-
-text-align:center;
-
-padding:70px 10px 50px;
-
-position:relative;
-
-}
-
-/* background glow */
-
-.top::before{
-
-content:"";
-
-position:absolute;
-
-top:10px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:220px;
-
-height:220px;
-
-background:radial-gradient(circle,
-rgba(90,210,225,.25),
-transparent 70%);
-
-filter:blur(40px);
-
-z-index:-1;
-
-}
-
-.top h1{
-
-font-size:46px;
-
-font-weight:600;
-
-letter-spacing:.5px;
-
-/* cyan gradient text */
-
-background:linear-gradient(90deg,#7be3f0,#48b8c8);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-.paw{
-
-font-size:34px;
-
-margin-left:8px;
-
-color:#6edcea;
-
-/* floating animation */
-
-animation:float 3s ease-in-out infinite;
-
-}
-
-.top p{
-
-color:#9fb3bd;
-
-margin-top:10px;
-
-font-size:15px;
-
-}
-
-/* floating animation */
-
-@keyframes float{
-
-0%{ transform:translateY(0); }
-
-50%{ transform:translateY(-4px); }
-
-100%{ transform:translateY(0); }
-
-}
-
-/* card sections */
-
-.box{
-
-background:linear-gradient(180deg,#16212c,#1c2835);
-
-padding:28px;
-
-border-radius:20px;
-
-margin-bottom:24px;
-
-border:1px solid rgba(255,255,255,.04);
-
-transition:.25s;
-
-}
-
-.box:hover{
-
-transform:translateY(-4px);
-
-}
-
-.box h2{
-
-display:flex;
-
-align-items:center;
-
-gap:10px;
-
-margin-bottom:12px;
-
-}
-
-.box p{
-
-color:#9fb3bd;
-
-line-height:1.6;
-
-}
-
-/* button */
-
-.btn{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:10px;
-
-margin-top:18px;
-
-padding:10px 18px;
-
-border-radius:25px;
-
-background:linear-gradient(135deg,#5bd3e3,#3da8b7);
-
-text-decoration:none;
-
-color:#052025;
-
-font-size:14px;
-
-}
-
-.btn:hover{
-
-transform:translateY(-2px);
-
-box-shadow:0 6px 14px rgba(60,180,200,.25);
-
-}
-
-/* featured */
-
-.feature{
-
-background:
-linear-gradient(
-135deg,
-rgba(70,200,210,.12),
-rgba(40,120,130,.15)
-),
-linear-gradient(180deg,#16212c,#1c2835);
-
-}
-
-/* grid links */
-
-.links{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:18px;
-
-margin-bottom:24px;
-
-}
-
-/* each link box */
-
-.linkcard{
-
-background:#16212c;
-
-padding:22px;
-
-border-radius:16px;
-
-text-align:center;
-
-border:1px solid rgba(255,255,255,.05);
-
-text-decoration:none;
-
-color:#e7f0f3;
-
-transition:.25s;
-
-}
-
-.linkcard:hover{
-
-transform:translateY(-4px);
-
-background:#1e2c38;
-
-}
-
-.linkcard i{
-
-font-size:22px;
-
-color:#5bd3e3;
-
-display:block;
-
-margin-bottom:10px;
-
-}
-
-.small{
-
-display:block;
-
-color:#9fb3bd;
-
-font-size:14px;
-
-margin-top:6px;
-
-}
-
-/* contact */
-
-.contact p{
-
-display:flex;
-
-gap:10px;
-
-margin:10px 0;
-
-color:#9fb3bd;
-
-}
-
-.contact i{
-
-color:#5bd3e3;
-
-}
-
-/* footer */
-
-footer{
-
-text-align:center;
-
-margin-top:30px;
-
-font-size:14px;
-
-color:#9fb3bd;
-
-}
-
-footer i{
-
-color:#5bd3e3;
-
-}
-
-/* animation */
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(8px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* mobile */
-
-@media(max-width:600px){
-
-.top h1{
-font-size:34px;
-}
-
-.paw{
-font-size:28px;
-}
-
-.box{
-padding:22px;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PawDevs | Next-Gen Devfolio</title>
+    <meta name="description" content="PawDevs - A technology-focused development group building reliable, efficient, and user-friendly Android applications. Home of PawGram and PawTube.">
+    <meta name="keywords" content="PawDevs, Android Development, PawGram, PawTube, Open Source, Software Engineering, Sky, Android Apps">
+    <meta name="author" content="Sky, PawDevs">
+    <meta name="theme-color" content="#05080a">
+
+    <meta property="og:title" content="PawDevs | Next-Gen Devfolio">
+    <meta property="og:description" content="Android Developers • Open-Source Contributors • Technology Enthusiasts">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/thepawdevs">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%235ab0b8' d='M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-4.2-31.8-11.8l-40-34.3c-22.1-18.9-53.7-18.9-75.7 0l-40 34.3c-8.9 7.6-20.3 11.8-31.8 11.8c-25.8 0-46.7-20.9-46.7-46.7v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM318.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s42.1-69.1 74.4-58.5s46.9 53.9 32.6 96.8s-42.1 69.1-74.4 58.5z'/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* New Gen Variables */
+        :root {
+            --bg-base: #05080a;
+            --bg-surface: rgba(255, 255, 255, 0.02);
+            --bg-surface-hover: rgba(255, 255, 255, 0.04);
+            
+            --accent: #5ab0b8;
+            --accent-glow: rgba(90, 176, 184, 0.25);
+            --accent-dim: rgba(90, 176, 184, 0.1);
+            
+            --text-primary: #f8f9fa;
+            --text-secondary: #a0abb2;
+            --text-tertiary: #6b767d;
+            
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-highlight: rgba(90, 176, 184, 0.4);
+            
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+            --radius-pill: 100px;
+            
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Backgrounds */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Floating Island Navbar */
+        .nav-container {
+            position: fixed;
+            top: 24px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            background-color: rgba(5, 8, 10, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-pill);
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 12rem 5% 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-pill);
+            background: var(--accent-dim);
+            border: 1px solid var(--border-highlight);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px var(--accent-dim);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            margin-bottom: 1rem;
+            background: linear-gradient(180deg, #ffffff 0%, #a0abb2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0.85rem 1.8rem;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            cursor: pointer;
+            letter-spacing: -0.2px;
+        }
+        
+        .btn-small {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 24px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 32px rgba(90, 176, 184, 0.4);
+            background: #68c0c8;
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-surface);
+            color: var(--text-primary);
+            border-color: var(--border-subtle);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-surface-hover);
+            border-color: var(--border-highlight);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Info Sections (Bento Grid Style) */
+        .info-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 5% 5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .bento-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card:hover {
+            border-color: rgba(90, 176, 184, 0.3);
+            background: var(--bg-surface-hover);
+        }
+
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, var(--accent-dim), transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .bento-card:hover::before {
+            opacity: 1;
+        }
+
+        .bento-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .expertise-list i {
+            color: var(--accent);
+            background: var(--accent-dim);
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Tech Stack Terminal */
+        .tech-stack {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tech-stack .row {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--border-subtle);
+        }
+
+        .tech-stack .row:last-child { 
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .tech-stack .key { color: var(--text-tertiary); }
+        .tech-stack .value { color: var(--accent); font-weight: 500;}
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            background: linear-gradient(90deg, #fff, #a0abb2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-dim);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--accent) 0%, #297f87 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-pill);
+            background: rgba(90, 176, 184, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(90, 176, 184, 0.3);
+        }
+
+        .status-badge.dev {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border-color: var(--border-subtle);
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-card ul {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .project-card li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .project-card li i {
+            margin-top: 3px;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: auto;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1.5rem;
+        }
+
+        /* Principles Section */
+        .principles {
+            padding: 5rem 5% 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .principles h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .principle-item {
+            background: var(--bg-surface);
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            transition: var(--transition);
+        }
+
+        .principle-item:hover {
+            border-color: var(--accent);
+            background: rgba(90, 176, 184, 0.03);
+            transform: translateY(-4px);
+        }
+        
+        .principle-item i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        /* Disclaimer & Footer */
+        .disclaimer {
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto 4rem;
+            padding: 1.5rem 2rem;
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px dashed var(--border-subtle);
+            border-radius: var(--radius-sm);
+            line-height: 1.6;
+        }
+
+        .disclaimer strong {
+            color: var(--text-secondary);
+        }
+
+        footer {
+            padding: 4rem 5% 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+            background: #020304;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.5;
+        }
+
+        .footer-contact {
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+
+        .footer-contact h4 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            background: var(--bg-surface);
+            color: var(--text-secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .contact-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: var(--accent-dim);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container { padding: 0 15px; top: 15px; }
+            nav { padding: 0.8rem 1.2rem; }
+            .nav-links { display: none; }
+            .hero { padding: 10rem 5% 5rem; }
+            .hero h1 { font-size: 3rem; }
+            .btn-group { flex-direction: column; width: 100%; max-width: 300px; margin: 2rem auto 0; }
+            .btn { width: 100%; }
+            .tech-stack .row { grid-template-columns: 1fr; gap: 4px; padding-bottom: 1.2rem; }
+            .contact-links { flex-direction: column; }
+            .contact-links a { width: 100%; justify-content: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="main">
-
-<!-- improved header -->
-
-<div class="top">
-
-<h1>
-
-PawDevs 🐾
-
-</h1>
-
-<p>
-
-We use 🐾 to craft Tech
-
-</p>
-
-</div>
-
-
-<!-- who we are -->
-
-<div class="box">
-
-<h2><i class="fa-solid fa-rocket"></i> Who We Are</h2>
-
-<p>
-
-PawDevs is a group of passionate teen developers focused on exploring,
-building and experimenting with modern technologies.
-We turn creative ideas into real products and value community feedback.
-
-</p>
-
-<a class="btn" href="https://t.me/PawDevs" target="_blank">
-
-<i class="fa-brands fa-telegram"></i>
-
-Join PawDevs
-
-</a>
-
-</div>
-
-
-<!-- pawgram -->
-
-<div class="box feature">
-
-<h2><i class="fa-brands fa-apple"></i> PawGram</h2>
-
-<p>
-
-An iOS-style Instagram experience on Android with refined UI,
-smooth animations and performance focused design.
-
-</p>
-
-<a class="btn" href="https://pawgram-meow.vercel.app" target="_blank">
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-Visit PawGram
-
-</a>
-
-</div>
-
-
-<!-- links -->
-
-<div class="links">
-
-<a href="https://t.me/pawgramapp" target="_blank" class="linkcard">
-
-<i class="fa-solid fa-users"></i>
-
-PawGram Community
-
-<span class="small">Updates & Discussions</span>
-
-</a>
-
-
-<a href="https://pawgram-meow.vercel.app" target="_blank" class="linkcard">
-
-<i class="fa-solid fa-globe"></i>
-
-PawGram Website 
-
-<span class="small">Official PawGram Website</span>
-
-</a>
-
-
-<a href="https://github.com/thepawdevs" target="_blank" class="linkcard">
-
-<i class="fa-brands fa-github"></i>
-
-PawDevs GitHub
-
-<span class="small">GitHub Profile & Projects</span>
-
-</a>
-
-</div>
-
-
-<!-- contact -->
-
-<div class="box contact">
-
-<h2><i class="fa-solid fa-envelope"></i> Contact</h2>
-
-<p>
-
-<i class="fa-solid fa-envelope"></i>
-
-skyairpaw@gmail.com
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-robot"></i>
-
-<a href="https://t.me/PawOwnerRobot"
-target="_blank"
-style="text-decoration:none;color:#9fb3bd;">
-
-@PawOwnerRobot
-
-</a>
-
-</p>
-
-</div>
-
-
-<footer>
-
-Crafted with 🐾 by PawDevs
-
-<br>
-
-© 2026 PawDevs
-
-</footer>
-
-</div>
-
+    <div class="nav-container">
+        <nav aria-label="Main Navigation">
+            <a href="#" class="logo" aria-label="PawDevs Home">
+                <i class="fa-solid fa-paw" aria-hidden="true"></i> PawDevs
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/thepawdevs" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://t.me/PawDevs" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" aria-hidden="true"></i> Telegram</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <header class="hero fade-up" id="about">
+            <div class="hero-badge">
+                <i class="fa-solid fa-bolt"></i> Crafting Next-Gen Tech
+            </div>
+            <h1>PawDevs</h1>
+            <h2>Android Developers • Open-Source Contributors • Technology Enthusiasts</h2>
+            
+            <p>PawDevs is a technology-focused development group dedicated to building reliable, efficient, and user-friendly Android applications.</p>
+            
+            <p>We are passionate about software engineering, performance optimization, and delivering high-quality digital experiences. Our work emphasizes clean architecture, responsible development practices, and continuous improvement.</p>
+            
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Explore Projects
+                </a>
+                <a href="https://t.me/PawDevs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-brands fa-telegram" aria-hidden="true"></i> Join Community
+                </a>
+            </div>
+        </header>
+
+        <section class="info-sections" aria-label="Expertise and Technologies">
+            <div class="bento-card fade-up">
+                <h3><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Areas of Expertise</h3>
+                <ul class="expertise-list">
+                    <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Android Application Development</li>
+                    <li><i class="fa-solid fa-bolt" aria-hidden="true"></i> Performance Optimization</li>
+                    <li><i class="fa-solid fa-palette" aria-hidden="true"></i> User Interface & Experience Design</li>
+                    <li><i class="fa-solid fa-vial" aria-hidden="true"></i> Quality Assurance & Testing</li>
+                    <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Continuous Improvement & Iterative Development</li>
+                </ul>
+            </div>
+            
+            <div class="bento-card fade-up" style="transition-delay: 0.1s;">
+                <h3><i class="fa-solid fa-terminal" aria-hidden="true"></i> Technology Stack</h3>
+                <div class="tech-stack">
+                    <div class="row"><span class="key">Languages:</span> <span class="value">Java, Kotlin, JavaScript</span></div>
+                    <div class="row"><span class="key">Frontend:</span> <span class="value">HTML5, CSS3</span></div>
+                    <div class="row"><span class="key">Platform:</span> <span class="value">Android</span></div>
+                    <div class="row"><span class="key">Version Control:</span> <span class="value">Git, GitHub</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-header fade-up">
+                <h2>Featured Projects</h2>
+            </div>
+            
+            <div class="project-grid">
+                <article class="project-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="project-header">
+                        <i class="fa-brands fa-instagram project-icon" aria-hidden="true"></i>
+                        <span class="status-badge">Featured</span>
+                    </div>
+                    <h3><i class="fa-solid fa-star" aria-hidden="true" style="color: var(--accent); font-size: 1.2rem;"></i> PawGram</h3>
+                    <p>PawGram is a project centered on Instagram performance optimization and enhanced user experience.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-bolt" aria-hidden="true"></i> Improved performance and responsiveness</li>
+                        <li><i class="fa-solid fa-palette" aria-hidden="true"></i> Refined visual experience</li>
+                        <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Compatibility across a wide range of Android devices</li>
+                        <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Community-informed updates</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://pawgram-meow.vercel.app/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-globe" aria-hidden="true"></i> Website
+                        </a>
+                        <a href="https://github.com/thepawdevs/PawGram" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                        <a href="https://t.me/pawgramapp" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-telegram" aria-hidden="true"></i> Telegram
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="project-header">
+                        <i class="fa-brands fa-youtube project-icon" aria-hidden="true"></i>
+                        <span class="status-badge">Active</span>
+                    </div>
+                    <h3><i class="fa-solid fa-circle-play" aria-hidden="true" style="color: var(--accent); font-size: 1.2rem;"></i> PawTube</h3>
+                    <p>Tired of YouTube's ads, recommendations, and trackers? Meet PawTube — a clean, minimalist YouTube player built for distraction-free watching.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> No ads. No algorithm.</li>
+                        <li><i class="fa-solid fa-lock" aria-hidden="true"></i> Privacy-first (youtube-nocookie embed)</li>
+                        <li><i class="fa-solid fa-robot" aria-hidden="true"></i> Telegram Bot — instantly get a clean link via @PawTubeRobot</li>
+                        <li><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> No installs. No accounts. Just paste and watch.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://pawtube.vercel.app" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-play" aria-hidden="true"></i> Try it now
+                        </a>
+                        <a href="https://github.com/thepawdevs/PawTube" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> Open Source
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="project-header">
+                        <i class="fa-brands fa-spotify project-icon" style="color: var(--text-tertiary);" aria-hidden="true"></i>
+                        <span class="status-badge dev">In Development</span>
+                    </div>
+                    <h3><i class="fa-solid fa-music" aria-hidden="true" style="color: var(--text-tertiary); font-size: 1.2rem;"></i> Pawtify</h3>
+                    <p>A next-generation music streaming application blending seamless audio delivery with a dark, minimalist user interface engineered for maximum efficiency.</p>
+                    <div class="project-links">
+                        <span class="btn btn-secondary btn-small" style="opacity: 0.4; cursor: not-allowed;" aria-disabled="true">Coming Soon</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="principles fade-up" aria-label="Core Principles">
+            <h2><i class="fa-solid fa-fingerprint" aria-hidden="true" style="color: var(--accent);"></i> Our Principles</h2>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    Professional & Responsible
+                </div>
+                <div class="principle-item">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    User-Centered Design
+                </div>
+                <div class="principle-item">
+                    <i class="fa-solid fa-code-merge" aria-hidden="true"></i>
+                    Open Collaboration
+                </div>
+                <div class="principle-item">
+                    <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                    Continuous Innovation
+                </div>
+            </div>
+        </section>
+
+        <div class="disclaimer fade-up">
+            <p><i class="fa-solid fa-circle-info" aria-hidden="true"></i> <strong>Disclaimer:</strong> PawDevs operates independently and is not affiliated with any external companies or platforms unless explicitly stated. All projects are developed for educational, research, and development purposes.</p>
+        </div>
+    </main>
+
+    <footer class="fade-up">
+        <div class="footer-contact">
+            <h4>Contact Developers</h4>
+            <div class="contact-links">
+                <a href="mailto:skyairpaw@gmail.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> skyairpaw@gmail.com
+                </a>
+                <a href="https://t.me/PawOwnerRobot" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-robot" aria-hidden="true"></i> @PawOwnerRobot
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2026 PawDevs</div>
+            <div style="font-size: 0.85rem; color: var(--text-tertiary);">Building technology with purpose.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for smooth fade-up animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { 
+                root: null, 
+                rootMargin: '0px', 
+                threshold: 0.1 
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-up').forEach((element) => { 
+                observer.observe(element); 
+            });
+        });
+    </script>
 </body>
-
 </html>
