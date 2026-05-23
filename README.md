@@ -3,8 +3,8 @@
 **Android Developers • Open-Source Contributors • Technology Enthusiasts**
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/PawDevs)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/iamsky837)
-[![Website](https://img.shields.io/badge/Website-4285F4?style=flat&logo=google-chrome&logoColor=white)](https://thepawdevs.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/pawjects)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=flat&logo=google-chrome&logoColor=white)](https://pawjects.github.io/)
 
 ---
 
@@ -51,7 +51,7 @@ Version Control: Git, GitHub
 ### Project Links
 
 - 🌐 Website: https://pawgram-meow.vercel.app/
-- 💻 Repository: https://github.com/iamsky837/PawGram
+- 💻 Repository: https://github.com/pawjects/PawGram
 - 📢 Telegram: https://t.me/pawgramapp
 
 ---
